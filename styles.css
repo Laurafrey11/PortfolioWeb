@@ -500,26 +500,18 @@ h1 {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 36px; left: 50%; transform: translateX(-50%);
+  bottom: 32px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; justify-content: center;
 }
-.scroll-dot {
-  width: 24px; height: 40px;
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 100px;
-  position: relative;
+.scroll-arrow {
+  color: rgba(167,139,250,0.5);
+  animation: scrollBounce 2s ease-in-out infinite;
+  transition: color 0.2s;
 }
-.scroll-dot::after {
-  content: '';
-  position: absolute;
-  top: 6px; left: 50%; transform: translateX(-50%);
-  width: 4px; height: 8px;
-  background: var(--purple-light);
-  border-radius: 100px;
-  animation: scrollDot 1.8s ease-in-out infinite;
-}
-@keyframes scrollDot {
-  0% { top: 6px; opacity: 1; }
-  100% { top: 22px; opacity: 0; }
+.scroll-arrow:hover { color: var(--purple-light); }
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(6px); opacity: 1; }
 }
 
 /* ===========================
@@ -980,50 +972,117 @@ html.light .nav-links a:hover { color: #0f172a; }
 html.light .hero-sub { color: #475569; }
 html.light .stat-label { color: #475569; }
 html.light .stat-divider { background: rgba(0,0,0,0.1); }
-html.light .service-card, html.light .project-card, html.light .exp-card,
-html.light .cert-card, html.light .app-card, html.light .stack-group {
-  background: rgba(255,255,255,0.85);
-  border-color: rgba(0,0,0,0.08);
-  backdrop-filter: blur(8px);
+/* Light mode cards — crisp white with shadow for contrast */
+html.light .service-card,
+html.light .project-card,
+html.light .exp-card,
+html.light .cert-card,
+html.light .app-card,
+html.light .stack-group {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.09);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
 }
-html.light .service-card:hover, html.light .project-card:hover,
-html.light .exp-card:hover, html.light .app-card:hover {
-  background: rgba(255,255,255,1);
-  border-color: rgba(124,58,237,0.4);
+html.light .service-card:hover,
+html.light .project-card:hover,
+html.light .exp-card:hover,
+html.light .cert-card:hover,
+html.light .app-card:hover,
+html.light .stack-group:hover {
+  background: #ffffff;
+  border-color: rgba(124,58,237,0.35);
+  box-shadow: 0 4px 24px rgba(124,58,237,0.12), 0 1px 4px rgba(0,0,0,0.06);
 }
-html.light .service-card h3, html.light .project-card h3,
-html.light .exp-card .exp-role, html.light .app-info h3 { color: #0f172a; }
-html.light .service-card p, html.light .project-card p,
-html.light .exp-bullets li, html.light .app-info p { color: #475569; }
-html.light .exp-period { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.08); color: #64748b; }
-html.light .stack-item { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); color: #475569; }
-html.light .stack-item:hover { background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.3); color: #0f172a; }
-html.light .stack-group-label { color: #7c3aed; }
+/* Card text contrast */
+html.light .service-card h3,
+html.light .project-card h3,
+html.light .exp-card .exp-role,
+html.light .app-info h3,
+html.light .cert-name { color: #0f172a; }
+
+html.light .service-card p,
+html.light .project-card p,
+html.light .exp-bullets li span,
+html.light .app-info p { color: #334155; }
+
+html.light .service-card > p { color: #334155; }
+html.light .project-label { opacity: 0.9; }
+html.light .exp-company { color: #7c3aed; }
+html.light .exp-period { background: #f1f5f9; border-color: #e2e8f0; color: #475569; }
+html.light .exp-bullets li::before { color: #7c3aed; }
+html.light .exp-client { color: #16a34a; }
+
+/* Stack items */
+html.light .stack-item { background: #f8fafc; border-color: #e2e8f0; color: #334155; font-weight: 500; }
+html.light .stack-item:hover { background: rgba(124,58,237,0.07); border-color: rgba(124,58,237,0.3); color: #0f172a; }
+html.light .stack-group-label { color: #6d28d9; font-weight: 700; }
+
+/* Section text */
 html.light .section-header h2 { color: #0f172a; }
 html.light .section-header p { color: #475569; }
-html.light .grid-overlay { opacity: 0.4; background-image: linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg,rgba(0,0,0,0.04) 1px, transparent 1px); }
-html.light .orb { opacity: 0.12; }
-html.light .contact-card { background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(59,130,246,0.05)); border-color: rgba(124,58,237,0.2); }
+html.light .section-tag { background: rgba(109,40,217,0.08); border-color: rgba(109,40,217,0.2); color: #6d28d9; }
+
+/* Service img border */
+html.light .service-img { border-bottom-color: #f1f5f9; }
+
+/* Grid/orbs */
+html.light .grid-overlay { opacity: 0.5; background-image: linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px), linear-gradient(90deg,rgba(0,0,0,0.035) 1px, transparent 1px); }
+html.light .orb { opacity: 0.1; }
+html.light #shaderCanvas { opacity: 0.1; mix-blend-mode: multiply; filter: hue-rotate(180deg); }
+
+/* Contact */
+html.light .contact-card { background: linear-gradient(135deg, rgba(124,58,237,0.07), rgba(59,130,246,0.04)); border-color: rgba(124,58,237,0.18); box-shadow: 0 4px 24px rgba(124,58,237,0.08); }
 html.light .contact-card h2 { color: #0f172a; }
 html.light .contact-card p { color: #475569; }
-html.light .contact-link { background: rgba(255,255,255,0.8); border-color: rgba(0,0,0,0.08); color: #475569; }
-html.light .contact-link:hover { background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.4); color: #0f172a; }
-html.light footer { border-top-color: rgba(0,0,0,0.08); }
-html.light footer p { color: #64748b; }
-html.light .hero-pill { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.08); color: #64748b; }
-html.light .lang-toggle { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.08); }
-html.light .lang-toggle:hover { background: rgba(124,58,237,0.08); }
-html.light .theme-toggle { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.08); color: #64748b; }
-html.light .app-preview { background: #e8eaf0; }
-html.light .app-url { background: #dde0ec; border-color: #c8cbda; color: #8890a8; }
+html.light .contact-link { background: #ffffff; border-color: #e2e8f0; color: #334155; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+html.light .contact-link:hover { background: rgba(124,58,237,0.07); border-color: rgba(124,58,237,0.4); color: #0f172a; box-shadow: 0 2px 12px rgba(124,58,237,0.1); }
+
+/* Cert card */
+html.light .cert-sub { color: #64748b; }
+html.light .cert-icon.ms { background: rgba(0,120,212,0.1); border-color: rgba(0,120,212,0.2); }
+html.light .cert-icon.alt { background: rgba(234,179,8,0.1); border-color: rgba(234,179,8,0.2); }
+
+/* App preview */
+html.light .app-preview { background: #e8edf5; }
+html.light .app-url { background: #d8dde8; border-color: #c4cad8; color: #7880a0; }
+html.light .app-info h3 { color: #0f172a; }
+html.light .app-label { opacity: 0.9; }
+
+/* Project tags */
+html.light .project-tags li { background: #f1f5f9; border-color: #e2e8f0; color: #475569; }
+html.light .service-tags li { opacity: 0.9; }
+
+/* Project link */
 html.light .project-link { color: #7c3aed; }
 html.light .project-link:hover { color: #5b21b6; }
-html.light .cert-card { background: rgba(255,255,255,0.9); }
-html.light .cert-name { color: #0f172a; }
-html.light .cert-sub { color: #64748b; }
-html.light #shaderCanvas { opacity: 0.12; mix-blend-mode: multiply; filter: hue-rotate(180deg); }
-html.light .mobile-menu { background: rgba(240,242,248,0.98); }
-html.light .mobile-menu a { color: #64748b; border-bottom-color: rgba(0,0,0,0.06); }
+
+/* Live btn light */
+html.light .live-btn { background: rgba(22,163,74,0.08); border-color: rgba(22,163,74,0.25) !important; box-shadow: 0 0 10px rgba(22,163,74,0.1) !important; }
+html.light .live-btn .btn-text { color: #16a34a; }
+
+/* Footer */
+html.light footer { border-top-color: #e2e8f0; }
+html.light footer p { color: #64748b; }
+html.light .footer-copy { color: #94a3b8; }
+
+/* Nav / pills / toggles */
+html.light .hero-pill { background: #f1f5f9; border-color: #e2e8f0; color: #475569; }
+html.light .lang-toggle { background: #f1f5f9; border-color: #e2e8f0; color: #475569; }
+html.light .lang-toggle:hover { background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.25); }
+html.light .lang-option.active { color: #7c3aed; }
+html.light .theme-toggle { background: #f1f5f9; border-color: #e2e8f0; color: #64748b; }
+html.light .theme-toggle:hover { background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.25); }
+html.light .mobile-menu { background: rgba(248,250,252,0.98); border-top-color: #e2e8f0; }
+html.light .mobile-menu a { color: #475569; border-bottom-color: #f1f5f9; }
+html.light .mobile-menu a:hover { color: #0f172a; }
+
+/* Power BI embed in light */
+html.light .powerbi-embed { background: #e8edf5; }
+html.light .powerbi-browser-bar { background: #dde2ee; }
+html.light .powerbi-url { background: #cdd4e4; border-color: #b8c0d4; color: #7880a0; }
+
+/* Scroll arrow */
+html.light .scroll-arrow { color: rgba(124,58,237,0.4); }
 
 /* ===========================
    POWER BI EMBED
