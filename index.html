@@ -32,6 +32,10 @@
           <span class="lang-sep">/</span>
           <span class="lang-option" id="langES">ES</span>
         </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -49,6 +53,7 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg">
+      <canvas id="shaderCanvas"></canvas>
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
       <div class="orb orb-3"></div>
@@ -169,7 +174,7 @@
       </div>
       <div class="services-grid">
 
-        <div class="service-card reveal">
+        <div class="service-card reveal" data-glow>
           <div class="service-img service-img-bi">
             <svg viewBox="0 0 80 56" fill="none">
               <rect x="4" y="4" width="72" height="48" rx="6" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
@@ -192,7 +197,7 @@
           <ul class="service-tags"><li>Power BI</li><li>Tableau</li><li>Looker</li></ul>
         </div>
 
-        <div class="service-card reveal">
+        <div class="service-card reveal" data-glow>
           <div class="service-img service-img-auto">
             <svg viewBox="0 0 80 56" fill="none">
               <circle cx="14" cy="28" r="8" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
@@ -217,7 +222,7 @@
           <ul class="service-tags" style="--tag-color:#06b6d4;--tag-bg:rgba(6,182,212,0.1);--tag-border:rgba(6,182,212,0.2)"><li>Power Automate</li><li>N8N</li><li>Power Apps</li></ul>
         </div>
 
-        <div class="service-card reveal">
+        <div class="service-card reveal" data-glow>
           <div class="service-img service-img-ai">
             <svg viewBox="0 0 80 56" fill="none">
               <rect x="20" y="10" width="40" height="28" rx="5" fill="rgba(236,72,153,0.1)" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
@@ -238,7 +243,7 @@
           <ul class="service-tags" style="--tag-color:#ec4899;--tag-bg:rgba(236,72,153,0.1);--tag-border:rgba(236,72,153,0.2)"><li>LLMs</li><li>Copilot</li><li>AI Agents</li></ul>
         </div>
 
-        <div class="service-card reveal">
+        <div class="service-card reveal" data-glow>
           <div class="service-img service-img-data">
             <svg viewBox="0 0 80 56" fill="none">
               <ellipse cx="40" cy="16" rx="24" ry="8" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.35)" stroke-width="1"/>
@@ -271,7 +276,7 @@
       </div>
       <div class="exp-grid">
 
-        <div class="exp-card featured reveal">
+        <div class="exp-card featured reveal" data-glow>
           <div class="exp-header">
             <div>
               <div class="exp-company">Accenture</div>
@@ -288,7 +293,7 @@
           </ul>
         </div>
 
-        <div class="exp-card reveal">
+        <div class="exp-card reveal" data-glow>
           <div class="exp-header">
             <div><div class="exp-company">Fresh BI</div></div>
             <div class="exp-period">Apr 2022 – Oct 2025</div>
@@ -303,7 +308,7 @@
           </ul>
         </div>
 
-        <div class="exp-card reveal">
+        <div class="exp-card reveal" data-glow>
           <div class="exp-header">
             <div><div class="exp-company">Archgroup</div></div>
             <div class="exp-period">Mar 2025 – Nov 2025</div>
@@ -316,7 +321,7 @@
           </ul>
         </div>
 
-        <div class="exp-card reveal">
+        <div class="exp-card reveal" data-glow>
           <div class="exp-header">
             <div><div class="exp-company">Biwini</div></div>
             <div class="exp-period">Jan 2022 – Dec 2022</div>
@@ -329,7 +334,7 @@
           </ul>
         </div>
 
-        <div class="exp-card reveal">
+        <div class="exp-card reveal" data-glow>
           <div class="exp-header">
             <div><div class="exp-company">Municipalidad de Tigre</div></div>
             <div class="exp-period">Jan 2022 – Dec 2022</div>
@@ -341,7 +346,7 @@
           </ul>
         </div>
 
-        <div class="exp-card reveal">
+        <div class="exp-card reveal" data-glow>
           <div class="exp-header">
             <div><div class="exp-company">Media Chicas Jump Ed.</div></div>
             <div class="exp-period">Jul 2024 – Dec 2024</div>
@@ -353,7 +358,7 @@
           </ul>
         </div>
 
-        <div class="exp-card reveal">
+        <div class="exp-card reveal" data-glow>
           <div class="exp-header">
             <div><div class="exp-company">Coderhouse</div></div>
             <div class="exp-period">May 2021 – Dec 2022</div>
@@ -378,35 +383,35 @@
         <h2 data-en="Microsoft Certified." data-es="Certificada por Microsoft.">Microsoft Certified.</h2>
       </div>
       <div class="certs-grid">
-        <div class="cert-card reveal">
+        <div class="cert-card reveal" data-glow>
           <div class="cert-icon ms">🏆</div>
           <div class="cert-info">
             <div class="cert-name">Power BI Data Analyst Associate</div>
             <div class="cert-sub">PL-300 · Microsoft</div>
           </div>
         </div>
-        <div class="cert-card reveal">
+        <div class="cert-card reveal" data-glow>
           <div class="cert-icon ms">🏆</div>
           <div class="cert-info">
             <div class="cert-name">Power Platform Fundamentals</div>
             <div class="cert-sub">PL-900 · Microsoft</div>
           </div>
         </div>
-        <div class="cert-card reveal">
+        <div class="cert-card reveal" data-glow>
           <div class="cert-icon ms">🏆</div>
           <div class="cert-info">
             <div class="cert-name">Power Platform Solution Architect</div>
             <div class="cert-sub">PL-600 · Microsoft</div>
           </div>
         </div>
-        <div class="cert-card reveal">
+        <div class="cert-card reveal" data-glow>
           <div class="cert-icon ms">🏆</div>
           <div class="cert-info">
             <div class="cert-name">Fabric Analytics Engineer Associate</div>
             <div class="cert-sub">DP-600 · Microsoft</div>
           </div>
         </div>
-        <div class="cert-card reveal">
+        <div class="cert-card reveal" data-glow>
           <div class="cert-icon alt">⚡</div>
           <div class="cert-info">
             <div class="cert-name">Alteryx</div>
@@ -427,33 +432,21 @@
       </div>
       <div class="projects-grid">
 
-        <div class="project-card project-featured reveal">
-          <div class="project-visual project-visual-hr">
-            <svg viewBox="0 0 320 100" fill="none">
-              <rect x="0" y="0" width="320" height="100" fill="url(#hrBg)"/>
-              <rect x="20" y="60" width="24" height="32" rx="3" fill="rgba(124,58,237,0.5)"/>
-              <rect x="52" y="44" width="24" height="48" rx="3" fill="rgba(124,58,237,0.7)"/>
-              <rect x="84" y="30" width="24" height="62" rx="3" fill="#7c3aed"/>
-              <rect x="116" y="50" width="24" height="42" rx="3" fill="rgba(124,58,237,0.6)"/>
-              <rect x="148" y="38" width="24" height="54" rx="3" fill="rgba(124,58,237,0.8)"/>
-              <circle cx="220" cy="50" r="30" fill="none" stroke="rgba(167,139,250,0.2)" stroke-width="8"/>
-              <circle cx="220" cy="50" r="30" fill="none" stroke="url(#donutGrad)" stroke-width="8" stroke-dasharray="100 188" stroke-linecap="round" transform="rotate(-90 220 50)"/>
-              <text x="215" y="47" font-size="10" fill="#a78bfa" font-weight="700" font-family="Inter,sans-serif">53%</text>
-              <text x="210" y="58" font-size="6" fill="rgba(167,139,250,0.7)" font-family="Inter,sans-serif">Retention</text>
-              <rect x="264" y="30" width="40" height="16" rx="4" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
-              <rect x="264" y="52" width="40" height="16" rx="4" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
-              <rect x="264" y="74" width="40" height="16" rx="4" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
-              <defs>
-                <linearGradient id="hrBg" x1="0" y1="0" x2="320" y2="100" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="rgba(124,58,237,0.08)"/>
-                  <stop offset="100%" stop-color="rgba(59,130,246,0.05)"/>
-                </linearGradient>
-                <linearGradient id="donutGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#7c3aed"/>
-                  <stop offset="100%" stop-color="#06b6d4"/>
-                </linearGradient>
-              </defs>
-            </svg>
+        <div class="project-card project-featured reveal" data-glow>
+          <div class="powerbi-embed">
+            <div class="powerbi-browser-bar">
+              <span></span><span></span><span></span>
+              <div class="powerbi-url">Power BI · Executive HR Dashboard</div>
+              <div class="powerbi-live"><span></span>Live</div>
+            </div>
+            <div class="powerbi-frame-wrap">
+              <iframe
+                title="Executive HR Dashboard"
+                src="https://app.powerbi.com/view?r=eyJrIjoiYTgyMWUzNjUtZGI5ZS00N2U2LWE5NzItYTk2MGRhZGNiNWVhIiwidCI6ImNhMjJhYmIxLTY3OWYtNDQyZi1iYTRkLTg4NWZlNWIxZTQ2NCIsImMiOjZ9"
+                frameborder="0"
+                allowFullScreen="true">
+              </iframe>
+            </div>
           </div>
           <div class="project-body">
             <div class="project-label">Power BI</div>
@@ -464,7 +457,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-glow>
           <div class="project-visual project-visual-billing">
             <svg viewBox="0 0 140 80" fill="none">
               <rect width="140" height="80" fill="url(#billBg)"/>
@@ -493,7 +486,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-glow>
           <div class="project-visual project-visual-ai">
             <svg viewBox="0 0 140 80" fill="none">
               <rect width="140" height="80" fill="url(#aiBg)"/>
@@ -521,7 +514,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-glow>
           <div class="project-visual project-visual-pipeline">
             <svg viewBox="0 0 140 80" fill="none">
               <rect width="140" height="80" fill="url(#pipeBg)"/>
@@ -551,7 +544,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-glow>
           <div class="project-visual project-visual-sql">
             <svg viewBox="0 0 140 80" fill="none">
               <rect width="140" height="80" fill="url(#sqlBg)"/>
@@ -580,7 +573,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-glow>
           <div class="project-visual project-visual-report">
             <svg viewBox="0 0 140 80" fill="none">
               <rect width="140" height="80" fill="url(#repBg)"/>
@@ -625,7 +618,7 @@
         <p data-en="End-to-end apps built with product thinking, real data and deployed live — because shipping matters." data-es="Apps de extremo a extremo construidas con pensamiento de producto, datos reales y desplegadas en vivo.">End-to-end apps built with product thinking, real data and deployed live — because shipping matters.</p>
       </div>
       <div class="apps-grid">
-        <div class="app-card reveal">
+        <div class="app-card reveal" data-glow>
           <div class="app-preview">
             <div class="app-browser-bar">
               <span></span><span></span><span></span>
@@ -649,7 +642,7 @@
             <a href="https://my-g-hoja-de-ruta.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-small" data-en="Open Live App →" data-es="Abrir App →">Open Live App →</a>
           </div>
         </div>
-        <div class="app-card reveal">
+        <div class="app-card reveal" data-glow>
           <div class="app-preview">
             <div class="app-browser-bar">
               <span></span><span></span><span></span>
@@ -685,7 +678,7 @@
         <h2 data-en="Tools I work with" data-es="Herramientas con las que trabajo">Tools I work with</h2>
       </div>
       <div class="stack-grid reveal">
-        <div class="stack-group">
+        <div class="stack-group" data-glow>
           <div class="stack-group-label">Data & BI</div>
           <div class="stack-items">
             <div class="stack-item">Power BI</div>
@@ -695,7 +688,7 @@
             <div class="stack-item">DAX</div>
           </div>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-glow>
           <div class="stack-group-label" data-en="Automation" data-es="Automatización">Automation</div>
           <div class="stack-items">
             <div class="stack-item">N8N</div>
@@ -704,7 +697,7 @@
             <div class="stack-item">Alteryx</div>
           </div>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-glow>
           <div class="stack-group-label">AI / LLM</div>
           <div class="stack-items">
             <div class="stack-item">LLMs</div>
@@ -714,7 +707,7 @@
             <div class="stack-item">GCP</div>
           </div>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-glow>
           <div class="stack-group-label" data-en="Databases" data-es="Bases de Datos">Databases</div>
           <div class="stack-items">
             <div class="stack-item">SQL</div>
@@ -724,7 +717,7 @@
             <div class="stack-item">Oracle</div>
           </div>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-glow>
           <div class="stack-group-label" data-en="Engineering" data-es="Ingeniería">Engineering</div>
           <div class="stack-items">
             <div class="stack-item">Python</div>
@@ -733,7 +726,7 @@
             <div class="stack-item">React</div>
           </div>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-glow>
           <div class="stack-group-label" data-en="Tools" data-es="Herramientas">Tools</div>
           <div class="stack-items">
             <div class="stack-item">Git & GitHub</div>
