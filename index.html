@@ -18,22 +18,31 @@
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#" class="logo">ML<span>.</span></a>
+      <a href="#" class="logo">MLF<span>.</span></a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#apps">Live Apps</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a></li>
+        <li><a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a></li>
+        <li><a href="#apps" data-en="Live Apps" data-es="Apps en Vivo">Live Apps</a></li>
+        <li><a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option" id="langEN">EN</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" id="langES">ES</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#apps">Live Apps</a>
-      <a href="#contact">Contact</a>
+      <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+      <a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a>
+      <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+      <a href="#apps" data-en="Live Apps" data-es="Apps en Vivo">Live Apps</a>
+      <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
   </nav>
 
@@ -45,38 +54,101 @@
       <div class="orb orb-3"></div>
       <div class="grid-overlay"></div>
     </div>
-    <div class="hero-content">
-      <div class="badge reveal">Available for freelance work</div>
-      <h1 class="reveal">
-        I turn data into<br />
-        <span class="gradient-text">decisions & automation</span>
-      </h1>
-      <p class="hero-sub reveal">
-        AI Process Architect · Data Analyst · Developer<br />
-        Helping companies save time and make smarter calls through dashboards,
-        AI workflows, and automated processes.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="https://www.linkedin.com/in/marialaurafreyre/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn →</a>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="badge reveal" data-en="Available for freelance work" data-es="Disponible para trabajo freelance">Available for freelance work</div>
+        <h1 class="reveal">
+          <span data-en="I turn data into" data-es="Convierto datos en">I turn data into</span><br />
+          <span class="gradient-text" data-en="decisions & automation" data-es="decisiones y automatización">decisions & automation</span>
+        </h1>
+        <p class="hero-sub reveal">
+          <span data-en="AI Process Architect · Data Analyst · Developer" data-es="Arquitecta de Procesos IA · Analista de Datos · Desarrolladora">AI Process Architect · Data Analyst · Developer</span><br />
+          <span data-en="Designing end-to-end solutions that integrate data, LLM-based agents and business processes to optimize operations. Currently at Accenture, working with Mercado Libre." data-es="Diseño soluciones de extremo a extremo que integran datos, agentes LLM y procesos de negocio. Actualmente en Accenture, trabajando con Mercado Libre.">Designing end-to-end solutions that integrate data, LLM-based agents and business processes to optimize operations. Currently at Accenture, working with Mercado Libre.</span>
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn-primary" data-en="View Projects" data-es="Ver Proyectos">View Projects</a>
+          <a href="https://www.linkedin.com/in/marialaurafreyre/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn →</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label" data-en="Years of experience" data-es="Años de experiencia">Years of experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label" data-en="Projects delivered" data-es="Proyectos entregados">Projects delivered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label" data-en="Live apps deployed" data-es="Apps desplegadas">Live apps deployed</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-stats reveal">
-        <div class="stat">
-          <span class="stat-num">5+</span>
-          <span class="stat-label">Years of experience</span>
+
+      <!-- HERO ILLUSTRATION -->
+      <div class="hero-illustration reveal">
+        <div class="hero-illu-card card-main">
+          <div class="illu-card-header">
+            <div class="illu-dot green"></div>
+            <span data-en="Live Dashboard" data-es="Dashboard en Vivo">Live Dashboard</span>
+          </div>
+          <svg class="illu-chart" viewBox="0 0 200 80" fill="none">
+            <polyline points="0,70 30,52 60,58 90,30 120,38 150,15 180,22 200,10" stroke="url(#chartGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,70 30,52 60,58 90,30 120,38 150,15 180,22 200,10 200,80 0,80" fill="url(#areaGrad)" stroke="none"/>
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="illu-metrics">
+            <div class="illu-metric">
+              <span class="illu-num">+34%</span>
+              <span class="illu-label" data-en="Efficiency" data-es="Eficiencia">Efficiency</span>
+            </div>
+            <div class="illu-metric">
+              <span class="illu-num">-60%</span>
+              <span class="illu-label" data-en="Manual work" data-es="Trabajo manual">Manual work</span>
+            </div>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">20+</span>
-          <span class="stat-label">Projects delivered</span>
+
+        <div class="hero-illu-card card-float card-float-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <div>
+            <div class="float-title" data-en="AI Agent" data-es="Agente IA">AI Agent</div>
+            <div class="float-sub" data-en="Running 24/7" data-es="Activo 24/7">Running 24/7</div>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Live apps deployed</span>
+
+        <div class="hero-illu-card card-float card-float-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5" width="20" height="20"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <div>
+            <div class="float-title">Power BI</div>
+            <div class="float-sub" data-en="5 dashboards" data-es="5 dashboards">5 dashboards</div>
+          </div>
         </div>
+
+        <div class="hero-illu-card card-float card-float-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <div>
+            <div class="float-title" data-en="Automation" data-es="Automatización">Automation</div>
+            <div class="float-sub" data-en="N8N · Power Automate" data-es="N8N · Power Automate">N8N · Power Automate</div>
+          </div>
+        </div>
+
+        <!-- Background glow -->
+        <div class="illu-glow"></div>
       </div>
     </div>
+
     <div class="scroll-indicator">
       <div class="scroll-dot"></div>
     </div>
@@ -86,50 +158,216 @@
   <section id="services">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">What I Do</span>
-        <h2>End-to-end data & AI solutions</h2>
-        <p>From raw data to automated decisions — I cover the full stack.</p>
+        <span class="section-tag" data-en="What I Do" data-es="Qué Hago">What I Do</span>
+        <h2 data-en="End-to-end data & AI solutions" data-es="Soluciones de datos e IA de extremo a extremo">End-to-end data & AI solutions</h2>
+        <p data-en="From raw data to automated decisions — I cover the full stack." data-es="De datos crudos a decisiones automatizadas — cubro todo el stack.">From raw data to automated decisions — I cover the full stack.</p>
       </div>
       <div class="services-grid">
+
         <div class="service-card reveal">
+          <div class="service-img service-img-bi">
+            <svg viewBox="0 0 80 56" fill="none">
+              <rect x="4" y="4" width="72" height="48" rx="6" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
+              <rect x="12" y="28" width="10" height="20" rx="2" fill="rgba(124,58,237,0.6)"/>
+              <rect x="26" y="20" width="10" height="28" rx="2" fill="rgba(124,58,237,0.8)"/>
+              <rect x="40" y="14" width="10" height="34" rx="2" fill="#7c3aed"/>
+              <rect x="54" y="22" width="10" height="26" rx="2" fill="rgba(167,139,250,0.7)"/>
+              <circle cx="17" cy="26" r="2" fill="#a78bfa"/>
+              <circle cx="31" cy="18" r="2" fill="#a78bfa"/>
+              <circle cx="45" cy="12" r="2" fill="#a78bfa"/>
+              <circle cx="59" cy="20" r="2" fill="#a78bfa"/>
+              <polyline points="17,26 31,18 45,12 59,20" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="3 2"/>
+            </svg>
+          </div>
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
-          <h3>Executive Dashboards</h3>
-          <p>Interactive Power BI, Tableau and Looker dashboards tailored for decision-makers — clear, fast, actionable.</p>
-          <ul class="service-tags">
-            <li>Power BI</li><li>Tableau</li><li>Looker</li>
-          </ul>
+          <h3 data-en="Executive Dashboards" data-es="Dashboards Ejecutivos">Executive Dashboards</h3>
+          <p data-en="Interactive Power BI, Tableau and Looker dashboards tailored for decision-makers — clear, fast, actionable." data-es="Dashboards interactivos en Power BI, Tableau y Looker para tomadores de decisiones — claros, rápidos y accionables.">Interactive Power BI, Tableau and Looker dashboards tailored for decision-makers — clear, fast, actionable.</p>
+          <ul class="service-tags"><li>Power BI</li><li>Tableau</li><li>Looker</li></ul>
         </div>
+
         <div class="service-card reveal">
-          <div class="service-icon">
+          <div class="service-img service-img-auto">
+            <svg viewBox="0 0 80 56" fill="none">
+              <circle cx="14" cy="28" r="8" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+              <circle cx="40" cy="14" r="8" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+              <circle cx="66" cy="28" r="8" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+              <circle cx="40" cy="42" r="8" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+              <line x1="22" y1="28" x2="32" y2="18" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <line x1="48" y1="18" x2="58" y2="26" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <line x1="58" y1="32" x2="48" y2="40" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <line x1="32" y1="38" x2="22" y2="30" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <circle cx="14" cy="28" r="4" fill="#06b6d4"/>
+              <circle cx="40" cy="14" r="4" fill="rgba(6,182,212,0.5)"/>
+              <circle cx="66" cy="28" r="4" fill="rgba(6,182,212,0.5)"/>
+              <circle cx="40" cy="42" r="4" fill="rgba(6,182,212,0.5)"/>
+            </svg>
+          </div>
+          <div class="service-icon" style="color:#06b6d4;background:rgba(6,182,212,0.1);border-color:rgba(6,182,212,0.3)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
-          <h3>Process Automation</h3>
-          <p>Business workflows automated with Power Automate, Power Apps and N8N — eliminate repetitive tasks at scale.</p>
-          <ul class="service-tags">
-            <li>Power Automate</li><li>N8N</li><li>Power Apps</li>
-          </ul>
+          <h3 data-en="Process Automation" data-es="Automatización de Procesos">Process Automation</h3>
+          <p data-en="Business workflows automated with Power Automate, Power Apps and N8N — eliminate repetitive tasks at scale." data-es="Flujos de negocio automatizados con Power Automate, Power Apps y N8N — elimina tareas repetitivas a escala.">Business workflows automated with Power Automate, Power Apps and N8N — eliminate repetitive tasks at scale.</p>
+          <ul class="service-tags" style="--tag-color:#06b6d4;--tag-bg:rgba(6,182,212,0.1);--tag-border:rgba(6,182,212,0.2)"><li>Power Automate</li><li>N8N</li><li>Power Apps</li></ul>
         </div>
+
         <div class="service-card reveal">
-          <div class="service-icon">
+          <div class="service-img service-img-ai">
+            <svg viewBox="0 0 80 56" fill="none">
+              <rect x="20" y="10" width="40" height="28" rx="5" fill="rgba(236,72,153,0.1)" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
+              <rect x="26" y="16" width="28" height="4" rx="2" fill="rgba(236,72,153,0.4)"/>
+              <rect x="26" y="24" width="18" height="4" rx="2" fill="rgba(236,72,153,0.25)"/>
+              <path d="M32 38 L40 48 L48 38" fill="rgba(236,72,153,0.2)" stroke="rgba(236,72,153,0.4)" stroke-width="1"/>
+              <circle cx="12" cy="20" r="5" fill="rgba(236,72,153,0.08)" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
+              <circle cx="68" cy="36" r="5" fill="rgba(236,72,153,0.08)" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
+              <line x1="17" y1="22" x2="20" y2="24" stroke="rgba(236,72,153,0.4)" stroke-width="1" stroke-dasharray="2 2"/>
+              <line x1="63" y1="34" x2="60" y2="32" stroke="rgba(236,72,153,0.4)" stroke-width="1" stroke-dasharray="2 2"/>
+            </svg>
+          </div>
+          <div class="service-icon" style="color:#ec4899;background:rgba(236,72,153,0.1);border-color:rgba(236,72,153,0.3)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
-          <h3>AI-Powered Workflows</h3>
-          <p>LLM-based agents and Copilot integrations that classify, respond, and make decisions — 24/7, at scale.</p>
-          <ul class="service-tags">
-            <li>LLMs</li><li>Copilot</li><li>AI Agents</li>
-          </ul>
+          <h3 data-en="AI-Powered Workflows" data-es="Flujos Potenciados con IA">AI-Powered Workflows</h3>
+          <p data-en="LLM-based agents and Copilot integrations that classify, respond, and make decisions — 24/7, at scale." data-es="Agentes basados en LLMs e integraciones con Copilot que clasifican, responden y toman decisiones — 24/7.">LLM-based agents and Copilot integrations that classify, respond, and make decisions — 24/7, at scale.</p>
+          <ul class="service-tags" style="--tag-color:#ec4899;--tag-bg:rgba(236,72,153,0.1);--tag-border:rgba(236,72,153,0.2)"><li>LLMs</li><li>Copilot</li><li>AI Agents</li></ul>
         </div>
+
         <div class="service-card reveal">
-          <div class="service-icon">
+          <div class="service-img service-img-data">
+            <svg viewBox="0 0 80 56" fill="none">
+              <ellipse cx="40" cy="16" rx="24" ry="8" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.35)" stroke-width="1"/>
+              <path d="M16 16 Q16 28 40 28 Q64 28 64 16" fill="rgba(52,211,153,0.06)" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+              <path d="M16 28 Q16 40 40 40 Q64 40 64 28" fill="rgba(52,211,153,0.06)" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+              <ellipse cx="40" cy="40" rx="24" ry="8" fill="rgba(52,211,153,0.06)" stroke="rgba(52,211,153,0.25)" stroke-width="1"/>
+              <ellipse cx="40" cy="16" rx="10" ry="4" fill="rgba(52,211,153,0.3)"/>
+              <text x="34" y="19" font-size="5" fill="#34d399" font-family="monospace">SQL</text>
+            </svg>
+          </div>
+          <div class="service-icon" style="color:#34d399;background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.3)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <h3>Data Analysis</h3>
-          <p>SQL queries, Python pipelines and Microsoft Fabric transformations to surface the insights that matter.</p>
-          <ul class="service-tags">
-            <li>SQL</li><li>Python</li><li>MS Fabric</li>
+          <h3 data-en="Data Analysis" data-es="Análisis de Datos">Data Analysis</h3>
+          <p data-en="SQL queries, Python pipelines and Microsoft Fabric transformations to surface the insights that matter." data-es="Consultas SQL, pipelines de Python y transformaciones con Microsoft Fabric para sacar los insights que importan.">SQL queries, Python pipelines and Microsoft Fabric transformations to surface the insights that matter.</p>
+          <ul class="service-tags" style="--tag-color:#34d399;--tag-bg:rgba(52,211,153,0.1);--tag-border:rgba(52,211,153,0.2)"><li>SQL</li><li>Python</li><li>MS Fabric</li></ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-en="Experience" data-es="Experiencia">Experience</span>
+        <h2 data-en="Where I've made an impact." data-es="Dónde generé impacto.">Where I've made an impact.</h2>
+        <p data-en="End-to-end delivery across top-tier companies and high-scale environments." data-es="Entrega de extremo a extremo en empresas líderes y entornos de alta escala.">End-to-end delivery across top-tier companies and high-scale environments.</p>
+      </div>
+      <div class="exp-grid">
+
+        <div class="exp-card featured reveal">
+          <div class="exp-header">
+            <div>
+              <div class="exp-company">Accenture</div>
+              <div class="exp-client" data-en="Client: Mercado Libre" data-es="Cliente: Mercado Libre">Client: Mercado Libre</div>
+            </div>
+            <div class="exp-period">Nov 2025 – Present</div>
+          </div>
+          <div class="exp-role" data-en="Automation & Data Consultant" data-es="Consultora de Automatización y Datos">Automation & Data Consultant</div>
+          <ul class="exp-bullets">
+            <li><span data-en="Designed and implemented AI-powered monitoring agents to detect KPI deviations and trigger operational alerts." data-es="Diseñé e implementé agentes de monitoreo con IA para detectar desviaciones de KPIs y activar alertas operacionales.">Designed and implemented AI-powered monitoring agents to detect KPI deviations and trigger operational alerts.</span></li>
+            <li><span data-en="Built automated SQL pipelines in BigQuery to analyze operational performance and identify risk patterns." data-es="Construí pipelines SQL automatizados en BigQuery para analizar performance operacional e identificar patrones de riesgo.">Built automated SQL pipelines in BigQuery to analyze operational performance and identify risk patterns.</span></li>
+            <li><span data-en="Developed Looker dashboards used daily by operational and business teams for performance tracking." data-es="Desarrollé dashboards en Looker utilizados diariamente por equipos operacionales y de negocio.">Developed Looker dashboards used daily by operational and business teams for performance tracking.</span></li>
+            <li><span data-en="Automated reporting workflows, reducing manual effort and increasing data reliability at scale." data-es="Automaticé flujos de reportes, reduciendo esfuerzo manual y aumentando la confiabilidad de datos a escala.">Automated reporting workflows, reducing manual effort and increasing data reliability at scale.</span></li>
           </ul>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-header">
+            <div><div class="exp-company">Fresh BI</div></div>
+            <div class="exp-period">Apr 2022 – Dec 2025</div>
+          </div>
+          <div class="exp-role" data-en="Automation & Power Platform Specialist" data-es="Especialista en Automatización y Power Platform">Automation & Power Platform Specialist</div>
+          <ul class="exp-bullets">
+            <li><span data-en="Designed end-to-end automation architectures for reporting and operational processes." data-es="Diseñé arquitecturas de automatización de extremo a extremo para procesos operacionales y de reporting.">Designed end-to-end automation architectures for reporting and operational processes.</span></li>
+            <li><span data-en="Integrated LLM-based copilots and AI components into business workflows." data-es="Integré copilotos basados en LLMs y componentes de IA en flujos de negocio.">Integrated LLM-based copilots and AI components into business workflows.</span></li>
+            <li><span data-en="Built advanced Power BI dashboards aligned with executive decision-making." data-es="Construí dashboards avanzados en Power BI alineados con la toma de decisiones ejecutiva.">Built advanced Power BI dashboards aligned with executive decision-making.</span></li>
+          </ul>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-header">
+            <div><div class="exp-company">Biwini</div></div>
+            <div class="exp-period">Jan 2022 – Dec 2022</div>
+          </div>
+          <div class="exp-role" data-en="BI Analyst" data-es="Analista de BI">BI Analyst</div>
+          <ul class="exp-bullets">
+            <li><span data-en="Developed executive dashboards in Tableau and Power BI for the financial sector." data-es="Desarrollé dashboards ejecutivos en Tableau y Power BI para el sector financiero.">Developed executive dashboards in Tableau and Power BI for the financial sector.</span></li>
+            <li><span data-en="Performed financial and commercial data analysis to support strategic decisions." data-es="Realicé análisis financiero y comercial para apoyar decisiones estratégicas.">Performed financial and commercial data analysis to support strategic decisions.</span></li>
+            <li><span data-en="Key client: OMNI (Financial sector)." data-es="Cliente clave: OMNI (sector financiero).">Key client: OMNI (Financial sector).</span></li>
+          </ul>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-header">
+            <div><div class="exp-company">Coderhouse · Media Chicas · Municipalidad de Tigre</div></div>
+            <div class="exp-period">2021 – 2025</div>
+          </div>
+          <div class="exp-role" data-en="Tutor & Data Visualization Specialist" data-es="Tutora y Especialista en Visualización de Datos">Tutor & Data Visualization Specialist</div>
+          <ul class="exp-bullets">
+            <li><span data-en="Tutoring in Data Analytics, Power BI, Tableau, Power Platform and Azure (Coderhouse)." data-es="Tutoría en Data Analytics, Power BI, Tableau, Power Platform y Azure (Coderhouse).">Tutoring in Data Analytics, Power BI, Tableau, Power Platform and Azure (Coderhouse).</span></li>
+            <li><span data-en="Delivered training in Power Platform and Azure for the Microsoft YPF program (Media Chicas)." data-es="Capacitación en Power Platform y Azure para el programa Microsoft YPF (Media Chicas).">Delivered training in Power Platform and Azure for the Microsoft YPF program (Media Chicas).</span></li>
+            <li><span data-en="Designed Power BI dashboards for public management reporting (Municipalidad de Tigre)." data-es="Diseñé dashboards en Power BI para reportes de gestión pública (Municipalidad de Tigre).">Designed Power BI dashboards for public management reporting (Municipalidad de Tigre).</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-en="Certifications" data-es="Certificaciones">Certifications</span>
+        <h2 data-en="Microsoft Certified." data-es="Certificada por Microsoft.">Microsoft Certified.</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon ms">🏆</div>
+          <div class="cert-info">
+            <div class="cert-name">Power BI Data Analyst Associate</div>
+            <div class="cert-sub">PL-300 · Microsoft</div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon ms">🏆</div>
+          <div class="cert-info">
+            <div class="cert-name">Power Platform Fundamentals</div>
+            <div class="cert-sub">PL-900 · Microsoft</div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon ms">🏆</div>
+          <div class="cert-info">
+            <div class="cert-name">Power Platform Solution Architect</div>
+            <div class="cert-sub">PL-600 · Microsoft</div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon ms">🏆</div>
+          <div class="cert-info">
+            <div class="cert-name">Fabric Analytics Engineer Associate</div>
+            <div class="cert-sub">DP-600 · Microsoft</div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon alt">⚡</div>
+          <div class="cert-info">
+            <div class="cert-name">Alteryx</div>
+            <div class="cert-sub">PwC · Alteryx</div>
+          </div>
         </div>
       </div>
     </div>
@@ -139,70 +377,194 @@
   <section id="projects">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Featured Projects</span>
-        <h2>Real problems. Real results.</h2>
-        <p>A selection of projects across data, automation and AI — each solving a concrete business challenge.</p>
+        <span class="section-tag" data-en="Featured Projects" data-es="Proyectos Destacados">Featured Projects</span>
+        <h2 data-en="Real problems. Real results." data-es="Problemas reales. Resultados reales.">Real problems. Real results.</h2>
+        <p data-en="A selection of projects across data, automation and AI — each solving a concrete business challenge." data-es="Una selección de proyectos de datos, automatización e IA — cada uno resuelve un desafío real de negocio.">A selection of projects across data, automation and AI — each solving a concrete business challenge.</p>
       </div>
       <div class="projects-grid">
 
         <div class="project-card project-featured reveal">
-          <div class="project-label">Power BI</div>
-          <h3>Executive HR Dashboard</h3>
-          <p>Interactive executive dashboard to analyze workforce metrics and HR performance. Focused on headcount, turnover, absenteeism and data-driven decision-making for HR leadership teams.</p>
-          <ul class="project-tags">
-            <li>Power BI</li><li>DAX</li><li>HR Analytics</li>
-          </ul>
-          <a href="https://github.com/Laurafrey11/Portfolio/tree/main/power-bi-dashboards/executive-hr-dashboard" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          <div class="project-visual project-visual-hr">
+            <svg viewBox="0 0 320 100" fill="none">
+              <rect x="0" y="0" width="320" height="100" fill="url(#hrBg)"/>
+              <rect x="20" y="60" width="24" height="32" rx="3" fill="rgba(124,58,237,0.5)"/>
+              <rect x="52" y="44" width="24" height="48" rx="3" fill="rgba(124,58,237,0.7)"/>
+              <rect x="84" y="30" width="24" height="62" rx="3" fill="#7c3aed"/>
+              <rect x="116" y="50" width="24" height="42" rx="3" fill="rgba(124,58,237,0.6)"/>
+              <rect x="148" y="38" width="24" height="54" rx="3" fill="rgba(124,58,237,0.8)"/>
+              <circle cx="220" cy="50" r="30" fill="none" stroke="rgba(167,139,250,0.2)" stroke-width="8"/>
+              <circle cx="220" cy="50" r="30" fill="none" stroke="url(#donutGrad)" stroke-width="8" stroke-dasharray="100 188" stroke-linecap="round" transform="rotate(-90 220 50)"/>
+              <text x="215" y="47" font-size="10" fill="#a78bfa" font-weight="700" font-family="Inter,sans-serif">53%</text>
+              <text x="210" y="58" font-size="6" fill="rgba(167,139,250,0.7)" font-family="Inter,sans-serif">Retention</text>
+              <rect x="264" y="30" width="40" height="16" rx="4" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
+              <rect x="264" y="52" width="40" height="16" rx="4" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
+              <rect x="264" y="74" width="40" height="16" rx="4" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
+              <defs>
+                <linearGradient id="hrBg" x1="0" y1="0" x2="320" y2="100" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(124,58,237,0.08)"/>
+                  <stop offset="100%" stop-color="rgba(59,130,246,0.05)"/>
+                </linearGradient>
+                <linearGradient id="donutGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7c3aed"/>
+                  <stop offset="100%" stop-color="#06b6d4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-label">Power BI</div>
+            <h3 data-en="Executive HR Dashboard" data-es="Dashboard Ejecutivo de RRHH">Executive HR Dashboard</h3>
+            <p data-en="Interactive executive dashboard to analyze workforce metrics and HR performance. Focused on headcount, turnover, absenteeism and data-driven decision-making for HR leadership teams." data-es="Dashboard ejecutivo interactivo para analizar métricas de dotación y performance de RRHH. Enfocado en headcount, rotación, ausentismo y toma de decisiones para líderes de RRHH.">Interactive executive dashboard to analyze workforce metrics and HR performance. Focused on headcount, turnover, absenteeism and data-driven decision-making for HR leadership teams.</p>
+            <ul class="project-tags"><li>Power BI</li><li>DAX</li><li>HR Analytics</li></ul>
+          </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="project-label">Automation</div>
-          <h3>Automated Billing Workflow</h3>
-          <p>End-to-end billing automation that reduces manual effort and ensures process consistency for finance operations.</p>
-          <ul class="project-tags">
-            <li>Power Automate</li><li>N8N</li>
-          </ul>
-          <a href="https://github.com/Laurafrey11/Portfolio/tree/main/automation-n8n-power-automate" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          <div class="project-visual project-visual-billing">
+            <svg viewBox="0 0 140 80" fill="none">
+              <rect width="140" height="80" fill="url(#billBg)"/>
+              <rect x="10" y="15" width="50" height="35" rx="5" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+              <rect x="14" y="20" width="30" height="4" rx="2" fill="rgba(6,182,212,0.4)"/>
+              <rect x="14" y="28" width="22" height="3" rx="1.5" fill="rgba(6,182,212,0.2)"/>
+              <rect x="14" y="34" width="26" height="3" rx="1.5" fill="rgba(6,182,212,0.2)"/>
+              <rect x="14" y="40" width="18" height="3" rx="1.5" fill="rgba(6,182,212,0.15)"/>
+              <path d="M60 32 L80 32" stroke="rgba(6,182,212,0.5)" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arr)"/>
+              <rect x="80" y="20" width="50" height="35" rx="5" fill="rgba(6,182,212,0.08)" stroke="rgba(6,182,212,0.25)" stroke-width="1"/>
+              <circle cx="105" cy="38" r="10" fill="none" stroke="rgba(6,182,212,0.3)" stroke-width="1.5"/>
+              <path d="M100 38 l3 3 6-6" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="billBg" x1="0" y1="0" x2="140" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(6,182,212,0.06)"/>
+                  <stop offset="100%" stop-color="rgba(6,182,212,0.02)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-label" style="color:#06b6d4">Automation</div>
+            <h3 data-en="Automated Billing Workflow" data-es="Flujo de Facturación Automatizado">Automated Billing Workflow</h3>
+            <p data-en="End-to-end billing automation that reduces manual effort and ensures process consistency for finance operations." data-es="Automatización de facturación de extremo a extremo que reduce el trabajo manual y garantiza consistencia en operaciones financieras.">End-to-end billing automation that reduces manual effort and ensures process consistency for finance operations.</p>
+            <ul class="project-tags"><li>Power Automate</li><li>N8N</li></ul>
+          </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="project-label">AI Agent</div>
-          <h3>Automated Chatbot & AI Agent</h3>
-          <p>LLM-powered agent that automates customer interactions, classifies requests and supports business decision-making without human intervention.</p>
-          <ul class="project-tags">
-            <li>LLM</li><li>N8N</li><li>Chatbot</li>
-          </ul>
-          <a href="https://github.com/Laurafrey11/Portfolio/tree/main/automation-n8n-power-automate/automated-chatbot" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          <div class="project-visual project-visual-ai">
+            <svg viewBox="0 0 140 80" fill="none">
+              <rect width="140" height="80" fill="url(#aiBg)"/>
+              <rect x="30" y="12" width="80" height="24" rx="5" fill="rgba(236,72,153,0.1)" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
+              <rect x="36" y="18" width="50" height="4" rx="2" fill="rgba(236,72,153,0.4)"/>
+              <rect x="36" y="26" width="34" height="3" rx="1.5" fill="rgba(236,72,153,0.2)"/>
+              <rect x="30" y="44" width="80" height="24" rx="5" fill="rgba(236,72,153,0.07)" stroke="rgba(236,72,153,0.2)" stroke-width="1"/>
+              <rect x="36" y="50" width="44" height="4" rx="2" fill="rgba(236,72,153,0.25)"/>
+              <rect x="36" y="58" width="28" height="3" rx="1.5" fill="rgba(236,72,153,0.15)"/>
+              <circle cx="70" cy="40" r="4" fill="rgba(236,72,153,0.2)" stroke="rgba(236,72,153,0.5)" stroke-width="1"/>
+              <circle cx="70" cy="40" r="2" fill="#ec4899"/>
+              <defs>
+                <linearGradient id="aiBg" x1="0" y1="0" x2="140" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(236,72,153,0.06)"/>
+                  <stop offset="100%" stop-color="rgba(236,72,153,0.02)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-label" style="color:#ec4899">AI Agent</div>
+            <h3 data-en="Automated Chatbot & AI Agent" data-es="Chatbot y Agente IA Automatizado">Automated Chatbot & AI Agent</h3>
+            <p data-en="LLM-powered agent that automates customer interactions, classifies requests and supports business decision-making without human intervention." data-es="Agente potenciado con LLM que automatiza interacciones con clientes, clasifica solicitudes y apoya la toma de decisiones sin intervención humana.">LLM-powered agent that automates customer interactions, classifies requests and supports business decision-making without human intervention.</p>
+            <ul class="project-tags"><li>LLM</li><li>N8N</li><li>Chatbot</li></ul>
+          </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="project-label">Data Engineering</div>
-          <h3>Fabric & Python Data Pipelines</h3>
-          <p>Automated pipelines for cleaning, transforming and analyzing multi-source data using Microsoft Fabric and Python — reliable, scalable insights delivery.</p>
-          <ul class="project-tags">
-            <li>MS Fabric</li><li>Python</li><li>ETL</li>
-          </ul>
-          <a href="https://github.com/Laurafrey11/Portfolio/tree/main/data-analysis-transformation/Fabric-Python" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          <div class="project-visual project-visual-pipeline">
+            <svg viewBox="0 0 140 80" fill="none">
+              <rect width="140" height="80" fill="url(#pipeBg)"/>
+              <rect x="8" y="30" width="26" height="20" rx="4" fill="rgba(52,211,153,0.12)" stroke="rgba(52,211,153,0.35)" stroke-width="1"/>
+              <text x="14" y="43" font-size="6" fill="#34d399" font-family="monospace">CSV</text>
+              <path d="M34 40 L50 40" stroke="rgba(52,211,153,0.6)" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <rect x="50" y="26" width="26" height="28" rx="4" fill="rgba(52,211,153,0.15)" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+              <text x="53" y="37" font-size="5" fill="#34d399" font-family="monospace">Python</text>
+              <text x="55" y="46" font-size="5" fill="rgba(52,211,153,0.6)" font-family="monospace">clean</text>
+              <text x="57" y="52" font-size="5" fill="rgba(52,211,153,0.6)" font-family="monospace">transform</text>
+              <path d="M76 40 L92 40" stroke="rgba(52,211,153,0.6)" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <rect x="92" y="30" width="30" height="20" rx="4" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+              <text x="96" y="43" font-size="5.5" fill="#34d399" font-family="monospace">Fabric</text>
+              <defs>
+                <linearGradient id="pipeBg" x1="0" y1="0" x2="140" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(52,211,153,0.06)"/>
+                  <stop offset="100%" stop-color="rgba(52,211,153,0.02)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-label" style="color:#34d399">Data Engineering</div>
+            <h3 data-en="Fabric & Python Data Pipelines" data-es="Pipelines de Datos con Fabric y Python">Fabric & Python Data Pipelines</h3>
+            <p data-en="Automated pipelines for cleaning, transforming and analyzing multi-source data using Microsoft Fabric and Python." data-es="Pipelines automatizados para limpiar, transformar y analizar datos de múltiples fuentes con Microsoft Fabric y Python.">Automated pipelines for cleaning, transforming and analyzing multi-source data using Microsoft Fabric and Python.</p>
+            <ul class="project-tags"><li>MS Fabric</li><li>Python</li><li>ETL</li></ul>
+          </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="project-label">Analytics</div>
-          <h3>SQL Data Analysis</h3>
-          <p>Data modeling, querying and analysis using SQL to generate structured, business-ready datasets — from raw tables to actionable insights.</p>
-          <ul class="project-tags">
-            <li>SQL</li><li>Data Modeling</li><li>Analytics</li>
-          </ul>
-          <a href="https://github.com/Laurafrey11/Portfolio/tree/main/data-analysis-transformation/SQL" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          <div class="project-visual project-visual-sql">
+            <svg viewBox="0 0 140 80" fill="none">
+              <rect width="140" height="80" fill="url(#sqlBg)"/>
+              <rect x="10" y="10" width="120" height="60" rx="5" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+              <text x="16" y="26" font-size="7" fill="rgba(96,165,250,0.8)" font-family="monospace">SELECT name, revenue</text>
+              <text x="16" y="36" font-size="7" fill="rgba(96,165,250,0.8)" font-family="monospace">FROM clients</text>
+              <text x="16" y="46" font-size="7" fill="rgba(96,165,250,0.6)" font-family="monospace">WHERE active = true</text>
+              <text x="16" y="56" font-size="7" fill="rgba(96,165,250,0.5)" font-family="monospace">ORDER BY revenue DESC</text>
+              <rect x="10" y="10" width="120" height="11" rx="5" fill="rgba(59,130,246,0.1)"/>
+              <circle cx="18" cy="16" r="2.5" fill="#ff5f57"/>
+              <circle cx="26" cy="16" r="2.5" fill="#ffbd2e"/>
+              <circle cx="34" cy="16" r="2.5" fill="#28ca41"/>
+              <defs>
+                <linearGradient id="sqlBg" x1="0" y1="0" x2="140" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(59,130,246,0.06)"/>
+                  <stop offset="100%" stop-color="rgba(59,130,246,0.02)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-label" style="color:#60a5fa">Analytics</div>
+            <h3 data-en="SQL Data Analysis" data-es="Análisis de Datos con SQL">SQL Data Analysis</h3>
+            <p data-en="Data modeling, querying and analysis using SQL to generate structured, business-ready datasets — from raw tables to actionable insights." data-es="Modelado, consultas y análisis de datos con SQL para generar datasets estructurados y listos para el negocio.">Data modeling, querying and analysis using SQL to generate structured, business-ready datasets — from raw tables to actionable insights.</p>
+            <ul class="project-tags"><li>SQL</li><li>Data Modeling</li><li>Analytics</li></ul>
+          </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="project-label">Reporting</div>
-          <h3>Automated Reporting Workflow</h3>
-          <p>Scheduled, automated reporting pipelines that deliver business insights to stakeholders without manual intervention — consistent, on time, every time.</p>
-          <ul class="project-tags">
-            <li>Power Automate</li><li>N8N</li><li>Reporting</li>
-          </ul>
-          <a href="https://github.com/Laurafrey11/Portfolio/tree/main/automation-n8n-power-automate/automated-reporting-workflow" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          <div class="project-visual project-visual-report">
+            <svg viewBox="0 0 140 80" fill="none">
+              <rect width="140" height="80" fill="url(#repBg)"/>
+              <rect x="10" y="14" width="55" height="52" rx="5" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+              <rect x="16" y="20" width="35" height="4" rx="2" fill="rgba(245,158,11,0.4)"/>
+              <rect x="16" y="28" width="28" height="3" rx="1.5" fill="rgba(245,158,11,0.2)"/>
+              <rect x="16" y="34" width="32" height="3" rx="1.5" fill="rgba(245,158,11,0.2)"/>
+              <rect x="16" y="40" width="20" height="3" rx="1.5" fill="rgba(245,158,11,0.15)"/>
+              <rect x="16" y="50" width="42" height="8" rx="3" fill="rgba(245,158,11,0.2)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+              <path d="M72 40 C 84 28, 84 52, 96 40" stroke="rgba(245,158,11,0.5)" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/>
+              <circle cx="96" cy="40" r="3" fill="rgba(245,158,11,0.3)" stroke="rgba(245,158,11,0.6)" stroke-width="1.5"/>
+              <rect x="102" y="20" width="30" height="14" rx="4" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+              <rect x="102" y="40" width="30" height="14" rx="4" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.15)" stroke-width="1"/>
+              <text x="108" y="30" font-size="5" fill="rgba(245,158,11,0.8)" font-family="monospace">report.pdf</text>
+              <text x="108" y="50" font-size="5" fill="rgba(245,158,11,0.6)" font-family="monospace">report.xlsx</text>
+              <defs>
+                <linearGradient id="repBg" x1="0" y1="0" x2="140" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(245,158,11,0.06)"/>
+                  <stop offset="100%" stop-color="rgba(245,158,11,0.02)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-label" style="color:#f59e0b">Reporting</div>
+            <h3 data-en="Automated Reporting Workflow" data-es="Flujo de Reportes Automatizado">Automated Reporting Workflow</h3>
+            <p data-en="Scheduled pipelines that deliver business insights to stakeholders without manual intervention — consistent, on time, every time." data-es="Pipelines programados que entregan insights de negocio a los stakeholders sin intervención manual — consistentes, a tiempo, siempre.">Scheduled pipelines that deliver business insights to stakeholders without manual intervention — consistent, on time, every time.</p>
+            <ul class="project-tags"><li>Power Automate</li><li>N8N</li><li>Reporting</li></ul>
+          </div>
         </div>
 
       </div>
@@ -213,9 +575,9 @@
   <section id="apps">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">VibeCoding – Live Apps</span>
-        <h2>From idea to production.</h2>
-        <p>End-to-end apps built with product thinking, real data and deployed live — because shipping matters.</p>
+        <span class="section-tag" data-en="VibeCoding – Live Apps" data-es="VibeCoding – Apps en Vivo">VibeCoding – Live Apps</span>
+        <h2 data-en="From idea to production." data-es="De la idea a producción.">From idea to production.</h2>
+        <p data-en="End-to-end apps built with product thinking, real data and deployed live — because shipping matters." data-es="Apps de extremo a extremo construidas con pensamiento de producto, datos reales y desplegadas en vivo.">End-to-end apps built with product thinking, real data and deployed live — because shipping matters.</p>
       </div>
       <div class="apps-grid">
         <div class="app-card reveal">
@@ -235,13 +597,11 @@
             </div>
           </div>
           <div class="app-info">
-            <div class="app-label">Property Management</div>
-            <h3>Building & HOA Management App</h3>
-            <p>Ticketing system, monthly roadmap planner and KPI dashboard for residential building administrators. Designed for clarity and operational efficiency.</p>
-            <ul class="project-tags">
-              <li>React</li><li>Vercel</li><li>Dashboard</li>
-            </ul>
-            <a href="https://my-g-hoja-de-ruta.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-small">Open Live App →</a>
+            <div class="app-label" data-en="Property Management" data-es="Gestión de Propiedades">Property Management</div>
+            <h3 data-en="Building & HOA Management App" data-es="App de Gestión de Edificios y Consorcios">Building & HOA Management App</h3>
+            <p data-en="Ticketing system, monthly roadmap planner and KPI dashboard for residential building administrators. Designed for clarity and operational efficiency." data-es="Sistema de tickets, planificador mensual y dashboard de KPIs para administradores de edificios. Diseñado para claridad y eficiencia operativa.">Ticketing system, monthly roadmap planner and KPI dashboard for residential building administrators. Designed for clarity and operational efficiency.</p>
+            <ul class="project-tags"><li>React</li><li>Vercel</li><li>Dashboard</li></ul>
+            <a href="https://my-g-hoja-de-ruta.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-small" data-en="Open Live App →" data-es="Abrir App →">Open Live App →</a>
           </div>
         </div>
         <div class="app-card reveal">
@@ -261,13 +621,11 @@
             </div>
           </div>
           <div class="app-info">
-            <div class="app-label">Personal Finance</div>
-            <h3>Personal Finance Tracker</h3>
-            <p>Expense and income tracking with monthly financial overview, simple dashboard and intuitive UX — focused on everyday decision-making clarity.</p>
-            <ul class="project-tags">
-              <li>React</li><li>Vercel</li><li>Finance</li>
-            </ul>
-            <a href="https://finanzas-iota-eight.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-small">Open Live App →</a>
+            <div class="app-label" data-en="Personal Finance" data-es="Finanzas Personales">Personal Finance</div>
+            <h3 data-en="Personal Finance Tracker" data-es="Tracker de Finanzas Personales">Personal Finance Tracker</h3>
+            <p data-en="Expense and income tracking with monthly financial overview, simple dashboard and intuitive UX — focused on everyday decision-making clarity." data-es="Seguimiento de gastos e ingresos con resumen mensual, dashboard simple y UX intuitiva — enfocada en claridad para la toma de decisiones cotidiana.">Expense and income tracking with monthly financial overview, simple dashboard and intuitive UX — focused on everyday decision-making clarity.</p>
+            <ul class="project-tags"><li>React</li><li>Vercel</li><li>Finance</li></ul>
+            <a href="https://finanzas-iota-eight.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-small" data-en="Open Live App →" data-es="Abrir App →">Open Live App →</a>
           </div>
         </div>
       </div>
@@ -278,8 +636,8 @@
   <section id="stack">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Tech Stack</span>
-        <h2>Tools I work with</h2>
+        <span class="section-tag" data-en="Tech Stack" data-es="Stack Tecnológico">Tech Stack</span>
+        <h2 data-en="Tools I work with" data-es="Herramientas con las que trabajo">Tools I work with</h2>
       </div>
       <div class="stack-grid reveal">
         <div class="stack-group">
@@ -292,7 +650,7 @@
           </div>
         </div>
         <div class="stack-group">
-          <div class="stack-group-label">Automation</div>
+          <div class="stack-group-label" data-en="Automation" data-es="Automatización">Automation</div>
           <div class="stack-items">
             <div class="stack-item">N8N</div>
             <div class="stack-item">Power Automate</div>
@@ -309,7 +667,7 @@
           </div>
         </div>
         <div class="stack-group">
-          <div class="stack-group-label">Engineering</div>
+          <div class="stack-group-label" data-en="Engineering" data-es="Ingeniería">Engineering</div>
           <div class="stack-items">
             <div class="stack-item">SQL</div>
             <div class="stack-item">Python</div>
@@ -326,10 +684,14 @@
     <div class="container">
       <div class="contact-card reveal">
         <div class="contact-orb"></div>
-        <span class="section-tag">Get in Touch</span>
-        <h2>Let's build something together.</h2>
-        <p>Available for freelance, consulting and remote opportunities across data, automation and AI.</p>
+        <span class="section-tag" data-en="Get in Touch" data-es="Contacto">Get in Touch</span>
+        <h2 data-en="Let's build something together." data-es="Construyamos algo juntos.">Let's build something together.</h2>
+        <p data-en="Available for freelance, consulting and remote opportunities across data, automation and AI." data-es="Disponible para freelance, consultoría y trabajo remoto en datos, automatización e IA.">Available for freelance, consulting and remote opportunities across data, automation and AI.</p>
         <div class="contact-links">
+          <a href="https://wa.me/541167409207" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp
+          </a>
           <a href="mailto:lalifreyre.lf@gmail.com" class="contact-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             lalifreyre.lf@gmail.com
@@ -344,7 +706,7 @@
           </a>
           <a href="https://cv-kappa-bice.vercel.app/" target="_blank" rel="noopener" class="contact-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            View CV
+            <span data-en="View CV" data-es="Ver CV">View CV</span>
           </a>
         </div>
       </div>
@@ -355,9 +717,9 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span class="logo">ML<span>.</span></span>
-        <p>Maria Laura Freyre · AI Process Architect & Data Analyst</p>
-        <p class="footer-copy">© 2025 · Built with precision.</p>
+        <span class="logo">MLF<span>.</span></span>
+        <p>Maria Laura Freyre · <span data-en="AI Process Architect & Data Analyst" data-es="Arquitecta de Procesos IA y Analista de Datos">AI Process Architect & Data Analyst</span></p>
+        <p class="footer-copy">© 2025 · <span data-en="Built with precision." data-es="Construido con precisión.">Built with precision.</span></p>
       </div>
     </div>
   </footer>
