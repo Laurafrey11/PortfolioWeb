@@ -224,6 +224,26 @@ body {
   background-size: 60px 60px;
 }
 
+/* HERO PILLS */
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
 /* HERO LAYOUT */
 .hero-layout {
   position: relative;
@@ -495,7 +515,7 @@ section { padding: 100px 0; }
 #experience { background: rgba(255,255,255,0.01); }
 .exp-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
 }
 .exp-card {
@@ -671,8 +691,8 @@ section { padding: 100px 0; }
 =========================== */
 .stack-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
 }
 .stack-group { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
 .stack-group-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple-light); margin-bottom: 16px; }
