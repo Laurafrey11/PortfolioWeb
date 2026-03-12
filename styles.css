@@ -642,8 +642,30 @@ section { padding: 100px 0; }
   text-decoration: none;
   margin-top: auto;
   transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 .project-link:hover { color: #fff; }
+.live-link {
+  color: #4ade80;
+  background: rgba(74,222,128,0.08);
+  border: 1px solid rgba(74,222,128,0.2);
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  align-self: flex-start;
+}
+.live-link::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.live-link:hover { color: #fff; background: rgba(74,222,128,0.15); border-color: rgba(74,222,128,0.4); }
 
 /* ===========================
    LIVE APPS
